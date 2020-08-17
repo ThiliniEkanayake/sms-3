@@ -1,0 +1,84 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;	
+	width: 100%;
+	background: #eee;
+	overflow-wrap: break-word;
+}
+
+/*aside{
+	min-width: 200px;
+}*/
+
+aside .nav-item{
+	border-bottom: 2px solid black;
+}
+
+footer{
+	padding: 20px;
+	background: #aaa;
+	/*float: left;*/
+}
+
+.statistics-flex{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.s-item{
+	min-width: 200px;
+	max-width: 25%;
+}
+
+.statistics-flex > div{
+	border-radius: 10px;
+}
+
+#user-nav{
+	position: absolute;
+	top: 100%;
+}
+
+#user-nav .nav-link{
+	font-size: 16px;
+	width: 100%;
+}
+
+.admissions-table {
+	display: flex;
+	width: 100% !important;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-top: 25px;
+}
+
+
+
+
+@media  (min-width:0px){
+	
+}
+
+@media  (min-width:576px){
+	
+}
+
+@media  (min-width:768px){
+}
+
+@media  (min-width:992px){
+
+	#header-school-info{
+		justify-content: flex-start;
+	}
+}
+
+@media  (min-width:1200px){
+
+}
