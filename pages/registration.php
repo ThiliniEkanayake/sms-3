@@ -114,6 +114,7 @@
 		if(empty($all_errors[0]) && empty($all_errors[1])){
 			$data = array();
 			 // $data["index_number"]= $index_number;
+			$data['admission_type'] = "student";
 			 $data["name_with_initials"]= $name_with_initials;
 			 $data["full_name"]= $full_name;
 			 $data["grade"]= $grade;
@@ -125,18 +126,25 @@
 			 $data['parent_type'] = $parent_type;
 			 $data['already_have_account'] = $already_have_account;
 			 $data['parent_account_id'] = $parent_account_id;
-			 $data["father_name"]= $father_name;
-			 $data["father_occupation"]= $father_occupation;
-			 $data["father_contact_number"]= $father_contact_number;
-			 $data["father_email"]= $father_email;
-			 $data["mother_name"]= $mother_name;
-			 $data["mother_occupation"]= $mother_occupation;
-			 $data["mother_contact_number"]= $mother_contact_number;
-			 $data["mother_email"]= $mother_email;
-			 $data["guardian_name"]= $guardian_name;
-			 $data["guardian_occupation"]= $guardian_occupation;
-			 $data["guardian_contact_number"]= $guardian_contact_number;
-			 $data["guardian_email"]= $guardian_email;
+			 if($already_have_account == true){
+			 	if($parent_type == "father"){
+					 $data["parent_name"]= $father_name;
+					 $data["parent_occupation"]= $father_occupation;
+					 $data["parent_contact_number"]= $father_contact_number;
+					 $data["parent_email"]= $father_email;
+				}else if($parent_type == "mother"){
+					 $data["parent_name"]= $mother_name;
+					 $data["parent_occupation"]= $mother_occupation;
+					 $data["parent_contact_number"]= $mother_contact_number;
+					 $data["parent_email"]= $mother_email;
+
+				}else if($parent_type == "guardian"){
+					 $data["parent_name"]= $guardian_name;
+					 $data["parent_occupation"]= $guardian_occupation;
+					 $data["parent_contact_number"]= $guardian_contact_number;
+					 $data["parent_email"]= $guardian_email;
+				}
+			 }
 			 
 			$result = $con ->insert('admissions',$data);
 			if($result){

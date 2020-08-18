@@ -112,16 +112,16 @@
 									</ul>
 								</nav>
 							</li>
-							<li id="interview-li" class="nav-item"><a href="#" class="nav-link">Interview Pannels</a>
+							<li id="interview-li" class="nav-item"><a href="#" class="nav-link">Interview Panels</a>
 								<button class="toggle-button" target="interview-nav">
 									<img src="<?php echo set_url('img/close-menu.png') ?>" width="20px">
 								</button>
 								<div id="interview-nav" class="no-collapsed nav sub-nav">
 									<ul class="d-flex flex-col">
-										<li class="nav-item"><a href="" class="nav-link"  parent-li="interview-li">All pannels</a></li>
-										<li class="nav-item"><a href="<?php echo set_url('pages/interview-pannel-create.php') ?>" class="nav-link" parent-li="interview-li">Add new Pannel</a></li>
-										<li class="nav-item"><a href="" class="nav-link"  parent-li="interview-li">Update pannels</a></li>
-										<li class="nav-item"><a href="" class="nav-link"  parent-li="interview-li">Delete pannels</a></li>
+										<li class="nav-item"><a href="" class="nav-link"  parent-li="interview-li">All panels</a></li>
+										<li class="nav-item"><a href="<?php echo set_url('pages/interview-panel-create.php') ?>" class="nav-link" parent-li="interview-li">Add new Panel</a></li>
+										<li class="nav-item"><a href="" class="nav-link"  parent-li="interview-li">Update panels</a></li>
+										<li class="nav-item"><a href="" class="nav-link"  parent-li="interview-li">Delete panels</a></li>
 									</ul>
 									
 								</div>

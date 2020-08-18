@@ -37,7 +37,10 @@
 			<div class="col-12 col-md-6 p-3">
 				<fieldset >
 					<legend>Student Info</legend>
-
+					<div class="form-group">
+						<label for="name-with-initials">Name with initials (<code title="required"> * </code>)</label>
+						<input type="text" value="<?php if(isset($result['name_with_initials'])){echo $result['name_with_initials'];} ?>" name="name-with-initials" placeholder="Name with initials" id="name-with-initials" disabled="disabled">
+					</div>
 					<div class="form-group">
 						<label for="name-with-initials">Name with initials (<code title="required"> * </code>)</label>
 						<input type="text" value="<?php if(isset($result['name_with_initials'])){echo $result['name_with_initials'];} ?>" name="name-with-initials" placeholder="Name with initials" id="name-with-initials" disabled="disabled">
@@ -127,66 +130,66 @@
 						<div id="father" class="collapsed">
 							<div class="form-group">
 								<label for="father-name">Father Name (<code title="required"> * </code>)</label>
-								<input type="text" value="<?php if(isset($result['father_name'])){echo $result['father_name'];} ?>" name="father-name" placeholder="Father Name" id="father-name"  disabled="disabled">
+								<input type="text" value="<?php if(isset($result['parent_name'])){echo $result['parent_name'];} ?>" name="father-name" placeholder="Father Name" id="father-name"  disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="father-occupation">Father Occupation (<code title="required"> * </code>)</label>
-								<input type="text" value="<?php if(isset($result['father_occupation'])){echo $result['father_occupation'];} ?>" name="father-occupation" placeholder="Father Occupation" id="father-occupation" disabled="disabled" >
+								<input type="text" value="<?php if(isset($result['parent_occupation'])){echo $result['parent_occupation'];} ?>" name="father-occupation" placeholder="Father Occupation" id="father-occupation" disabled="disabled" >
 							</div>
 
 							<div class="form-group">
 								<label for="father-contact-number">Father Contact Number (<code title="required"> * </code>)</label>
-								<input type="number" value="<?php if(isset($result['father_contact_number'])){echo $result['father_contact_number'];} ?>" name="father-contact-number" placeholder="Father Contact Number" id="father-contact-number" disabled="disabled" >
+								<input type="number" value="<?php if(isset($result['parent_contact_number'])){echo $result['parent_contact_number'];} ?>" name="father-contact-number" placeholder="Father Contact Number" id="father-contact-number" disabled="disabled" >
 							</div>
 
 							<div class="form-group">
 								<label for="father-email">Father Email (<code title="required"> * </code>)</label>
-								<input type="email" value="<?php if(isset($result['father_email'])){echo $result['father_email'];} ?>" name="father-email" placeholder="Father Email" id="father-email" disabled="disabled" >
+								<input type="email" value="<?php if(isset($result['parent_email'])){echo $result['parent_email'];} ?>" name="father-email" placeholder="Father Email" id="father-email" disabled="disabled" >
 							</div>
 						</div>
 
 						<div id="mother" class="no-collapsed">
 							<div class="form-group">
 								<label for="mother-name">Mother Name (<code title="required"> * </code>)</label>
-								<input type="text" value="<?php if(isset($result['mother_name'])){echo $result['mother_name'];} ?>" name="mother-name" placeholder="Mother Name" id="mother-name" disabled="disabled">
+								<input type="text" value="<?php if(isset($result['parent_name'])){echo $result['parent_name'];} ?>" name="mother-name" placeholder="Mother Name" id="mother-name" disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="mother-occupation">Mother Occupation (<code title="required"> * </code>)</label>
-								<input type="text" value="<?php if(isset($result['mother_occupation'])){echo $result['mother_occupation'];} ?>" name="mother-occupation" placeholder="Mother Occupation" id="mother-occupation" disabled="disabled">
+								<input type="text" value="<?php if(isset($result['parent_occupation'])){echo $result['parent_occupation'];} ?>" name="mother-occupation" placeholder="Mother Occupation" id="mother-occupation" disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="mother-contact-number">Mother Contact Number (<code title="required"> * </code>)</label>
-								<input type="number" value="<?php if(isset($result['mother_contact_number'])){echo $result['mother_contact_number'];} ?>" name="mother-contact-number" placeholder="Mother Contact Number" id="mother-contact-number" disabled="disabled">
+								<input type="number" value="<?php if(isset($result['parent_contact_number'])){echo $result['parent_contact_number'];} ?>" name="mother-contact-number" placeholder="Mother Contact Number" id="mother-contact-number" disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="mother-email">Mother Email (<code title="required"> * </code>)</label>
-								<input type="email" value="<?php if(isset($result['mother_email'])){echo $result['mother_email'];} ?>" name="mother-email" placeholder="Mother Email" id="mother-email" disabled="disabled">
+								<input type="email" value="<?php if(isset($result['parent_email'])){echo $result['parent_email'];} ?>" name="mother-email" placeholder="Mother Email" id="mother-email" disabled="disabled">
 							</div>						
 						</div>
 
 						<div id="guardian" class="no-collapsed">
 							<div class="form-group">
 								<label for="guardian-name">Guardian Name (<code title="required"> * </code>)</label>
-								<input type="text" value="<?php if(isset($result['guardian_name'])){echo $result['guardian_name'];} ?>" name="guardian-name" placeholder="Guardian Name" id="guardian-name" disabled="disabled">
+								<input type="text" value="<?php if(isset($result['parent_name'])){echo $result['parent_name'];} ?>" name="guardian-name" placeholder="Guardian Name" id="guardian-name" disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="guardian-occupation">Guardian Occupation (<code title="required"> * </code>)</label>
-								<input type="text" value="<?php if(isset($result['guardian_occupation'])){echo $result['guardian_occupation'];} ?>" name="guardian-occupation" placeholder="Guardian Occupation" id="guardian-occupation" disabled="disabled">
+								<input type="text" value="<?php if(isset($result['parent_occupation'])){echo $result['parent_occupation'];} ?>" name="guardian-occupation" placeholder="Guardian Occupation" id="guardian-occupation" disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="guardian-contact-number">Guardian Contact Number (<code title="required"> * </code>)</label>
-								<input type="number" value="<?php if(isset($result['guardian_contact_number'])){echo $result['guardian_contact_number'];} ?>" name="guardian-contact-number" placeholder="Guardian Contact Number" id="guardian-contact-number" disabled="disabled">
+								<input type="number" value="<?php if(isset($result['parent_contact_number'])){echo $result['parent_contact_number'];} ?>" name="guardian-contact-number" placeholder="Guardian Contact Number" id="guardian-contact-number" disabled="disabled">
 							</div>
 
 							<div class="form-group">
 								<label for="guardian-email">Guardian Email (<code title="required"> * </code>)</label>
-								<input type="email" value="<?php if(isset($result['guardian_email">'])){echo $result['					guardian_email'];} ?>" name="guardian-email" placeholder="Guardian Email" id="guardian-email" disabled="disabled">
+								<input type="email" value="<?php if(isset($result['parent_email">'])){echo $result['					parent_email'];} ?>" name="guardian-email" placeholder="Guardian Email" id="guardian-email" disabled="disabled">
 							</div>	
 						</div>
 						<div class="w-100 p-1"></div>

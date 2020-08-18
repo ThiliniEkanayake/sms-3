@@ -12,24 +12,24 @@
 <div id="content" class="col-11 col-md-8 col-lg-9 flex-col align-items-center justify-content-start">
 
 	<div>
-		<h2>Create New Interview Pannel</h2>
+		<h2>Create New Interview Panel</h2>
 	</div>
-	<form action="<?php echo set_url('pages/interview-pannel-create.php') ?>" class="col-12" method="POST">
+	<form action="<?php echo set_url('pages/interview-panel-create.php') ?>" class="col-12" method="POST">
 		<div class="col-12 col-lg-6 p-3">
 			<fieldset>
 				<legend>Basic Info</legend>
 				<div class="form-group">
-					<label for="pannel-id">Pannel ID</label>
-					<input type="text" name="pannel-id" id="pannel-id" disabled="">
+					<label for="panel-id">Panel ID</label>
+					<input type="text" name="panel-id" id="panel-id" disabled="">
 				</div>
 
 				<div class="form-group">
-					<label for="pannel-grade">Grade</label>
-					<input type="text" name="pannel-grade" id="pannel-grade" required="required">
+					<label for="panel-grade">Grade</label>
+					<input type="text" name="panel-grade" id="panel-grade" required="required">
 				</div>
 				<div class="form-group">
-					<label for="pannel-name">Pannel Name</label>
-					<input type="text" name="pannel-name" id="pannel-name" required="required">
+					<label for="panel-name">Panel Name</label>
+					<input type="text" name="panel-name" id="panel-name" disabled="disabled">
 				</div>
 
 			</fieldset>
@@ -55,7 +55,7 @@
 					<button type="button" class="btn btn-blue" id="add-teacher"  onclick="interview_add_teacher(this,'interview-teachers',4)">+add a teacher</button>
 				</div>
 				<hr>
-				<div class="d-flex justify-content-center">
+				<div class="d-flex justify-content-end">
 					<button type="submit" class="btn btn-blue" name="submit" id="submit">Submit</button>
 				</div>
 			</fieldset>

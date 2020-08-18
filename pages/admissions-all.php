@@ -8,7 +8,7 @@
 		header("Location:". explode(".php?","http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])[0] .".php" );	
 	}
 
-	$con->get(array("admission_id","full_name","grade","address","state"));
+	$con->get(array("admission_id","admission_type","full_name","grade","address","state"));
 	if(isset($_GET['admission-search'])){
 		if($_GET['admission-search'] == "all"){
 			$result_set = $con->select('admissions');
@@ -65,6 +65,7 @@
 			<thead>
 				<tr>
 					<th>Adm. ID</th>
+					<th>Adm. type</th>
 					<th>Full Name</th>
 					<th>grade</th>
 					<th>Address</th>
@@ -80,6 +81,7 @@
 				foreach ($result_set as $result) {
 					$row ="<tr>";
 					$row .= "<td>".$result['admission_id']."</td>";
+					$row .= "<td>".$result['admission_type']."</td>";
 					$row .= "<td>".$result['full_name']."</td>";
 					$row .= "<td>".$result['grade']."</td>";
 					$row .= "<td>".$result['address']."</td>";
